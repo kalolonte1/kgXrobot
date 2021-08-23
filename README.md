@@ -1,17 +1,9 @@
-</p>
 <p align="center">
-    <a href="https://github.com/feriexp/JisooXRobot"> <img src="https://img.shields.io/github/repo-size/noob-kittu/YoneRobot?color=orange&logo=github&logoColor=green&style=for-the-badge" /></a>
-    <a href="https://github.com/feriexp/JisooXRobot/commits"> <img src="https://img.shields.io/github/last-commit/noob-kittu/YoneRobot?color=blue&logo=github&logoColor=green&style=for-the-badge" /></a>
-    <a href="https://github.com/feriexp/JisooXRobot/issues"> <img src="https://img.shields.io/github/issues/noob-kittu/YoneRobot?color=blueviolet&logo=github&logoColor=green&style=for-the-badge" /></a>
-    <a href="https://github.com/feriexp/JisooXRobot/network/members"> <img src="https://img.shields.io/github/forks/noob-kittu/YoneRobot?color=red&logo=github&logoColor=green&style=for-the-badge" /></a>  
+  <img src="https://telegra.ph/file/5c34b06d6f1f1b11c6762.png">
 </p>
 
-<p align="center">
-  <img src="https://telegra.ph/file/7b375b3abb0b483fd0d98.jpg">
-</p>
-
-## Found Me On Telegram [@JisooXRobot](https://t.me/AnosVoldigoadBot)
-
+## Found Me On Telegram [@White_BloodCell](https://t.me/Fujikawara)
+## Found Owner Repo On Telegram [@JisooXRobot](https://t.me/AnosVoldigoadBot)
 
 
 # DEPLOY
