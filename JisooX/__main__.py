@@ -27,26 +27,26 @@ from JisooX.modules.connection import connect_button
 
 
 PM_START_TEXT = """
-_Hello_ *{}*
-_My name is_ *{}*\n_A Powerful Telegram ProBot to Manage Your Groups,feel free to add to your groups!!_
-_Maintained by_ [{}](tg://user?id={})
+𝙃𝙀𝙇𝙇𝙊 *{}*
+**𝘕𝘢𝘮𝘢 𝘚𝘢𝘺𝘢 𝘈𝘥𝘢𝘭𝘢𝘩** *{}*\n**𝘚𝘢𝘺𝘢 𝘈𝘥𝘢𝘭𝘢𝘩 𝘚𝘶𝘱𝘦𝘳𝘣𝘰𝘵 𝘛𝘦𝘭𝘦𝘨𝘳𝘢𝘮 𝘠𝘢𝘯𝘨 𝘈𝘬𝘢𝘯 𝘔𝘦𝘮𝘣𝘢𝘯𝘵𝘶 𝘒𝘢𝘭𝘪𝘢𝘯 𝘔𝘦𝘯𝘨𝘢𝘵𝘶𝘳 𝘎𝘳𝘰𝘶𝘱 𝘋𝘢𝘯 𝘔𝘦𝘳𝘪𝘢𝘩𝘬𝘢𝘯 𝘎𝘳𝘰𝘶𝘱 𝘒𝘢𝘭𝘪𝘢𝘯 𝘥𝘦𝘯𝘨𝘢𝘯 𝘔𝘦𝘮𝘶𝘵𝘢𝘳𝘬𝘢𝘯 𝘔𝘶𝘴𝘪𝘤 𝘋𝘪 𝘖𝘣𝘳𝘰𝘭𝘢𝘯 𝘴𝘶𝘢𝘳𝘢.**\n\n⚡𝙈𝙖𝙞𝙣𝙩𝙖𝙞𝙣𝙚𝙙 𝘽𝙮 𝙆𝙂𝙋𝙍𝙊𝙅𝙀𝘾𝙏
 """
 
 
 HELP_STRINGS = """
-Hey there! My name is *{}*.
-I'm a modular group management bot with a few fun extras! Have a look at the following for an idea of some of \
-the things I can help you with.
-*Main* commands available:
- 💠 - /start: start the bot
- 💠 - /help: PM's you this message.
- 💠 - /help <module name>: PM's you info about that module.
- 💠 - /source: Information about my source.
- 💠 - /settings:
-   🔹 - in PM: will send you your settings for all supported modules.
-   🔹 - in a group: will redirect you to pm, with all that chat's settings.
-{}
-And the following:
+ʜᴇɪ ᴋᴇᴛᴇᴍᴜ ʟᴀɢɪ,ᴍʏ ɴᴀᴍᴇ ɪs *{}*.
+𝐒𝐚𝐲𝐚 𝐀𝐝𝐚𝐥𝐚𝐡 𝐒𝐮𝐩𝐞𝐫𝐛𝐨𝐭
+𝐒𝐚𝐲𝐚 𝐌𝐞𝐦𝐩𝐮𝐧𝐲𝐚𝐢 𝐌𝐨𝐝𝐮𝐥 𝐘𝐚𝐧𝐠 𝐀𝐤𝐚𝐧 𝐌𝐞𝐦𝐛𝐚𝐧𝐭𝐮 𝐀𝐧𝐝𝐚
+𝐏𝐞𝐫𝐢𝐧𝐭𝐚𝐡 𝐏𝐞𝐫𝐭𝐚𝐦𝐚 𝐘𝐚𝐧𝐠 𝐃𝐢𝐬𝐞𝐝𝐢𝐚𝐤𝐚𝐧‼️
+ ➢ /start: mulai bot
+ ➢ /help: PM pesan ini.
+ ➢ /help <nama modul>: PM info tentang modul itu.
+ ➢ /source: Informasi tentang sumber saya.
+ ➢ /pengaturan:
+   • di PM: akan mengirimkan pengaturan Anda untuk semua modul yang didukung.
+   • dalam grup: akan mengarahkan Anda ke pm, dengan semua pengaturan obrolan itu.
+**sᴇᴍᴜᴀ ᴘᴇʀɪɴᴛᴀʜ ᴅᴀᴘᴀᴛ ᴅɪɢᴜɴᴀᴋᴀɴ ᴅᴇɴɢᴀɴ / ᴀᴛᴀᴜ !**
+
+**ᴅᴀɴ ʙᴇʀɪᴋᴜᴛ ɪɴɪ:**
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
 
@@ -58,8 +58,7 @@ def vercheck() -> str:
 
 
 SOURCE_STRING = """
-⚡I'm built in python3, using the python-telegram-bot library, and am fully opensource - you can find what makes me tick [here](https://github.com/ferikunn/JisooXRobot)
-⚡You Can Clone Me [Here](https://heroku.com/deploy?template=https://github.com/ferikunn/JisooXRobot.git)
+⚡I'm built in python3, using the python-telegram-bot library, and am fully opensource.
 """
 
 
@@ -165,7 +164,7 @@ def start(bot: Bot, update: Update, args: List[str]):
             send_start(bot, update)
     else:
         update.effective_message.reply_text("Heya,{} Here..\nHow can I help you? 🙂".format(bot.first_name),reply_markup=InlineKeyboardMarkup(
-                                                [[InlineKeyboardButton(text="⚜️Help",url="t.me/{}?start=help".format(bot.username))]]))
+                                                [[InlineKeyboardButton(text="ʜᴇʟᴘ",url="t.me/{}?start=help".format(bot.username))]]))
 
 def send_start(bot, update):
     #Try to remove old message
@@ -179,8 +178,8 @@ def send_start(bot, update):
     first_name = update.effective_user.first_name 
     text = PM_START_TEXT
 
-    keyboard = [[InlineKeyboardButton(text="🤝Help",callback_data="help_back"),InlineKeyboardButton(text="🛡Creator🛡",url="https://t.me/xflicks")]]
-    keyboard += [[InlineKeyboardButton(text="🌐Connect Group", callback_data="main_connect"),InlineKeyboardButton(text="⚜️Add Me⚜️",url="t.me/{}?startgroup=true".format(bot.username))]]
+    keyboard = [[InlineKeyboardButton(text="ʜᴇʟᴘ",callback_data="help_back"),InlineKeyboardButton(text="🛡Creator🛡",url="https://t.me/xflicks")]]
+    keyboard += [[InlineKeyboardButton(text="ᴄᴏɴɴᴇᴄᴛ ɢʀᴏᴜᴘ", callback_data="main_connect"),InlineKeyboardButton(text="⚜️Add Me⚜️",url="t.me/{}?startgroup=true".format(bot.username))]]
 
     update.effective_message.reply_photo(img, PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_ID), 
                                          reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
@@ -235,7 +234,7 @@ def help_button(bot: Bot, update: Update):
             query.message.reply_text(text=text,
                                      parse_mode=ParseMode.MARKDOWN,
                                      reply_markup=InlineKeyboardMarkup(
-                                         [[InlineKeyboardButton(text="🚶🏻‍♂️Back🚶🏻‍♂️", callback_data="help_back")]]))
+                                         [[InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="help_back")]]))
 
         elif prev_match:
             curr_page = int(prev_match.group(1))
@@ -280,15 +279,15 @@ def get_help(bot: Bot, update: Update):
 
         update.effective_message.reply_text("Contact me in PM to get the list of possible commands.",
                                             reply_markup=InlineKeyboardMarkup(
-                                                [[InlineKeyboardButton(text="⚜️Help",url="t.me/{}?start=help".format(bot.username))],  
-                                                [InlineKeyboardButton(text="🛡Contact Creator",url="https://t.me/xflicks")]]))
+                                                [[InlineKeyboardButton(text="ʜᴇʟᴘ",url="t.me/{}?start=help".format(bot.username))],  
+                                                [InlineKeyboardButton(text="ᴅᴇᴠᴇʟᴏᴘᴇʀ",url="https://t.me/xflicks")]]))
         return
 
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
         module = args[1].lower()
         text = "Here is the available help for the *{}* module:\n".format(HELPABLE[module].__mod_name__) \
                + HELPABLE[module].__help__
-        send_help(chat.id, text, InlineKeyboardMarkup([[InlineKeyboardButton(text="🚶‍♂️Back🚶‍♂️", callback_data="help_back")]]))
+        send_help(chat.id, text, InlineKeyboardMarkup([[InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="help_back")]]))
 
     else:
         send_help(chat.id, HELP_STRINGS)
@@ -343,7 +342,7 @@ def settings_button(bot: Bot, update: Update):
             query.message.reply_text(text=text,
                                      parse_mode=ParseMode.MARKDOWN,
                                      reply_markup=InlineKeyboardMarkup(
-                                         [[InlineKeyboardButton(text="🏃🏻‍♂️Back🏃🏻‍♂️",
+                                         [[InlineKeyboardButton(text="ʙᴀᴄᴋ",
                                                                 callback_data="stngs_back({})".format(chat_id))]]))
 
         elif prev_match:
@@ -402,7 +401,7 @@ def get_settings(bot: Bot, update: Update):
             text = "Click here to get this chat's settings, as well as yours."
             msg.reply_text(text,
                            reply_markup=InlineKeyboardMarkup(
-                               [[InlineKeyboardButton(text="⚙️Settings⚙️",
+                               [[InlineKeyboardButton(text="sᴇᴛᴛɪɴɢs",
                                                       url="t.me/{}?start=stngs_{}".format(
                                                           bot.username, chat.id))]]))
         else:
