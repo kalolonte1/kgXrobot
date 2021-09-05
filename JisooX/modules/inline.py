@@ -66,7 +66,7 @@ class AioHttp:
 
 __mod_name__ = "Inline"
 __help__ = """
- <b> INLINE BOT SERVICE OF @JisooXRobot </b> 
+ <b> INLINE BOT SERVICE OF @KGSuperbot </b> 
  
 <i> I'm more efficient when added as group admin. By the way these commands can be used by anyone in a group via inline.</i>
 
@@ -109,9 +109,9 @@ __help__ = """
 - pokedex [TEXT]: Pokemon Search
 """
 
-__mod_name__ = "Inline"
+__mod_name__ = "ɪɴʟɪɴᴇ"
 __help__ = """
- ==>> **INLINE BOT SERVICE OF @JisooXRobot** <<==
+ ==>> **INLINE BOT SERVICE OF @KGSuperbot** <<==
 `I'm more efficient when added as group admin. By the way these commands can be used by anyone in a group via inline.`
 
    >> Syntax <<
