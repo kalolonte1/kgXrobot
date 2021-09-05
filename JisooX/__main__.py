@@ -45,7 +45,6 @@ HELP_STRINGS = """
    • di PM: akan mengirimkan pengaturan Anda untuk semua modul yang didukung.
    • dalam grup: akan mengarahkan Anda ke pm, dengan semua pengaturan obrolan itu.
 **sᴇᴍᴜᴀ ᴘᴇʀɪɴᴛᴀʜ ᴅᴀᴘᴀᴛ ᴅɪɢᴜɴᴀᴋᴀɴ ᴅᴇɴɢᴀɴ / ᴀᴛᴀᴜ !**
-
 **ᴅᴀɴ ʙᴇʀɪᴋᴜᴛ ɪɴɪ:**
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
@@ -58,7 +57,7 @@ def vercheck() -> str:
 
 
 SOURCE_STRING = """
-⚡I'm built in python3, using the python-telegram-bot library, and am fully opensource.
+⚡I'm built in python3, using the python-telegram-bot library, and am fully opensource
 """
 
 
@@ -77,7 +76,7 @@ GDPR = []
 
 START_IMG = os.environ.get('START_IMG', None)
 if START_IMG is None:
-    img = "https://telegra.ph/file/c4c66449d0dfcf5f24b50.jpg"
+    img = "https://telegra.ph/file/75a9fa1c8213780a36c9a.jpg"
 else:
   img = START_IMG    
     
@@ -164,7 +163,7 @@ def start(bot: Bot, update: Update, args: List[str]):
             send_start(bot, update)
     else:
         update.effective_message.reply_text("Heya,{} Here..\nHow can I help you? 🙂".format(bot.first_name),reply_markup=InlineKeyboardMarkup(
-                                                [[InlineKeyboardButton(text="ʜᴇʟᴘ",url="t.me/{}?start=help".format(bot.username))]]))
+                                                [[InlineKeyboardButton(text="ʜᴇʟᴘ?",url="t.me/{}?start=help".format(bot.username))]]))
 
 def send_start(bot, update):
     #Try to remove old message
@@ -178,8 +177,21 @@ def send_start(bot, update):
     first_name = update.effective_user.first_name 
     text = PM_START_TEXT
 
-    keyboard = [[InlineKeyboardButton(text="ʜᴇʟᴘ",callback_data="help_back"),InlineKeyboardButton(text="ᴅᴇᴠᴇʟᴏᴘᴇʀ",url="https://t.me/knsgnwn")]]
-    keyboard += [[InlineKeyboardButton(text="ᴄᴏɴɴᴇᴄᴛ ɢʀᴏᴜᴘ", callback_data="main_connect"),InlineKeyboardButton(text="⚜ᴀᴅᴅ ᴍᴇ",url="t.me/{}?startgroup=true".format(bot.username))]]
+    keyboard = [
+    [
+        InlineKeyboardButton(
+            text="➕️ ᴀᴅᴅ ᴋɢ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕️", url="t.me/{}?startgroup=true".format(bot.username)),
+    ],
+    [
+        InlineKeyboardButton(text="ɢʀᴏᴜᴘ", url=f"https://t.me/chlenterasajak"),
+        InlineKeyboardButton(
+            text="ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/iyainyabre"
+        ),
+    ],
+    [
+        InlineKeyboardButton(text="ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅꜱ❔", callback_data="help_back"),
+    ],
+]
 
     update.effective_message.reply_photo(img, PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_ID), 
                                          reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
@@ -234,7 +246,7 @@ def help_button(bot: Bot, update: Update):
             query.message.reply_text(text=text,
                                      parse_mode=ParseMode.MARKDOWN,
                                      reply_markup=InlineKeyboardMarkup(
-                                         [[InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="help_back")]]))
+                                         [[InlineKeyboardButton(text="[ ʙᴀᴄᴋ ]", callback_data="help_back")]]))
 
         elif prev_match:
             curr_page = int(prev_match.group(1))
@@ -279,15 +291,15 @@ def get_help(bot: Bot, update: Update):
 
         update.effective_message.reply_text("Contact me in PM to get the list of possible commands.",
                                             reply_markup=InlineKeyboardMarkup(
-                                                [[InlineKeyboardButton(text="ʜᴇʟᴘ",url="t.me/{}?start=help".format(bot.username))],  
-                                                [InlineKeyboardButton(text="ᴅᴇᴠᴇʟᴏᴘᴇʀ",url="https://t.me/xflicks")]]))
+                                                [[InlineKeyboardButton(text="ᴄᴀɴ ɪ ʜᴇʟᴘ ʏᴏᴜ?",url="t.me/{}?start=help".format(bot.username))],  
+                                                [InlineKeyboardButton(text="ᴄᴏɴᴛᴀᴄᴛ ᴏᴡɴᴇʀ",url="https://t.me/iyainyabre")]]))
         return
 
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
         module = args[1].lower()
         text = "Here is the available help for the *{}* module:\n".format(HELPABLE[module].__mod_name__) \
                + HELPABLE[module].__help__
-        send_help(chat.id, text, InlineKeyboardMarkup([[InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="help_back")]]))
+        send_help(chat.id, text, InlineKeyboardMarkup([[InlineKeyboardButton(text="🚶‍♂️Back🚶‍♂️", callback_data="help_back")]]))
 
     else:
         send_help(chat.id, HELP_STRINGS)
@@ -401,7 +413,7 @@ def get_settings(bot: Bot, update: Update):
             text = "Click here to get this chat's settings, as well as yours."
             msg.reply_text(text,
                            reply_markup=InlineKeyboardMarkup(
-                               [[InlineKeyboardButton(text="sᴇᴛᴛɪɴɢs",
+                               [[InlineKeyboardButton(text="⚙️sᴇᴛᴛɪɴɢs⚙️",
                                                       url="t.me/{}?start=stngs_{}".format(
                                                           bot.username, chat.id))]]))
         else:
