@@ -185,7 +185,7 @@ def send_start(bot, update):
             text="➕️ ᴀᴅᴅ ᴋɢ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕️", url="t.me/{}?startgroup=true".format(bot.username)),
     ],
     [
-        InlineKeyboardButton(text="ᴍᴜsɪᴄ ʙᴏᴛ", callback_data="cbstart")
+        InlineKeyboardButton(text="ᴍᴜsɪᴄ ʙᴏᴛ", callback_data="cbstart"),
         InlineKeyboardButton(text="ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅꜱ❔", callback_data="help_back"),
     ],
 ]
