@@ -63,7 +63,7 @@ def status(bot: Bot, update: Update):
 	chat = update.effective_chat
 	
 	stat = "--- System Status ---\n"
-	stat += f"JisooXRobot Version: `{VERSION}`""\n"
+	stat += f"kgXrobot Version: `{VERSION}`""\n"
 	stat += "Python Version: `"+python_version()+"`\n"
 	stat += "GitHub API Version: `"+str(git.vercheck())+"`\n"
 	#Software Info
@@ -116,6 +116,6 @@ dispatcher.add_handler(SPEED_TEST_HANDLER)
 dispatcher.add_handler(SPEED_TEST_CALLBACKHANDLER)
 dispatcher.add_handler(STATUS_HANDLER)
 
-__mod_name__ = "SYSTEM INFO"
+__mod_name__ = "sʏsᴛᴇᴍ ɪɴғᴏ"
 __command_list__ = ["speedtest"]
 __handlers__ = [SPEED_TEST_HANDLER, SPEED_TEST_CALLBACKHANDLER]
