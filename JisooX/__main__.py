@@ -184,13 +184,13 @@ def send_start(bot, update):
     ],
     [
         InlineKeyboardButton(text="ɢʀᴏᴜᴘ", url="https://t.me/KGSupportgroup"),
-        InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url="https://t.me/rakasupport"),
+        InlineKeyboardButton(text="ᴅᴇᴠᴇʟᴏᴘᴇʀ", url="https://t.me/knsgnwn"),
     ],
     [
         InlineKeyboardButton(text="ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅꜱ❔", callback_data="help_back"),
     ],
     [
-        InlineKeyboardButton(text="ᴅᴇᴠᴇʟᴏᴘᴇʀ", url="https://t.me/knsgnwn"),
+        InlineKeyboardButton(text="ʜᴇʟᴘ ᴍᴜsɪᴄ", url="https://kgmusicbot.blogspot.com"),
     ],
 ]
 
