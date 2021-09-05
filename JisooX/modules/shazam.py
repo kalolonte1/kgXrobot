@@ -46,14 +46,14 @@ async def shazamm(client, message):
     messageo = f"""<b>Song Shazamed.</b>
 <b>Song Name : </b>{title}
 <b>Song By : </b>{by}
-<u><b>Identified By @JisooXRobot
+<u><b>Identified By @KGSuperbot
 """
     await client.send_photo(message.chat.id, image, messageo, parse_mode="HTML")
     os.remove(downloaded_file_name)
     await kek.delete()
 
 
-__mod_name__ = "Shazam"
+__mod_name__ = "sʜᴀᴢᴀᴍ"
 __help__ = """
 *SHAZAMMER*:
 Find any song with it's music or part of song
