@@ -172,14 +172,14 @@ def send_start(bot, update):
             text="➕️ ᴀᴅᴅ ᴋɢ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕️", url="t.me/{}?startgroup=true".format(bot.username)),
     ],
     [
-        InlineKeyboardButton(text="ɢʀᴏᴜᴘ", url="https://t.me/KGSupportgroup"),
-        InlineKeyboardButton(text="ᴅᴇᴠᴇʟᴏᴘᴇʀ", url="https://t.me/knsgnwn"),
+        InlineKeyboardButton(text="⟪ɢʀᴏᴜᴘ⟫", url="https://t.me/KGSupportgroup"),
+        InlineKeyboardButton(text="⟪ᴅᴇᴠᴇʟᴏᴘᴇʀ⟫", url="https://t.me/knsgnwn"),
     ],
     [
-        InlineKeyboardButton(text="ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅꜱ❔", callback_data="help_back"),
+        InlineKeyboardButton(text="⟪ʜᴇʟᴘ ᴍᴀɴᴀɢᴇʀ⟫", callback_data="help_back"),
     ],
     [
-        InlineKeyboardButton(text="ʜᴇʟᴘ ᴍᴜsɪᴄ", url="https://kgmusicbot.blogspot.com"),
+        InlineKeyboardButton(text="⟪ʜᴇʟᴘ ᴍᴜsɪᴄ⟫", url="https://kgmusicbot.blogspot.com"),
     ],
 ]
 
@@ -289,7 +289,7 @@ def get_help(bot: Bot, update: Update):
         module = args[1].lower()
         text = "Here is the available help for the *{}* module:\n".format(HELPABLE[module].__mod_name__) \
                + HELPABLE[module].__help__
-        send_help(chat.id, text, InlineKeyboardMarkup([[InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="help_back")]]))
+        send_help(chat.id, text, InlineKeyboardMarkup([[InlineKeyboardButton(text="⟪ʙᴀᴄᴋ⟫", callback_data="help_back")]]))
 
     else:
         send_help(chat.id, HELP_STRINGS)
@@ -403,7 +403,7 @@ def get_settings(bot: Bot, update: Update):
             text = "Click here to get this chat's settings, as well as yours."
             msg.reply_text(text,
                            reply_markup=InlineKeyboardMarkup(
-                               [[InlineKeyboardButton(text="⚙️sᴇᴛᴛɪɴɢs⚙️",
+                               [[InlineKeyboardButton(text="⟪sᴇᴛᴛɪɴɢs⟫",
                                                       url="t.me/{}?start=stngs_{}".format(
                                                           bot.username, chat.id))]]))
         else:
