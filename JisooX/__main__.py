@@ -33,19 +33,8 @@ PM_START_TEXT = """
 
 
 HELP_STRINGS = """
-ʜᴇɪ ᴋᴇᴛᴇᴍᴜ ʟᴀɢɪ,ᴍʏ ɴᴀᴍᴇ ɪs *{}*.
-𝐒𝐚𝐲𝐚 𝐀𝐝𝐚𝐥𝐚𝐡 𝐒𝐮𝐩𝐞𝐫𝐛𝐨𝐭
-𝐒𝐚𝐲𝐚 𝐌𝐞𝐦𝐩𝐮𝐧𝐲𝐚𝐢 𝐌𝐨𝐝𝐮𝐥 𝐘𝐚𝐧𝐠 𝐀𝐤𝐚𝐧 𝐌𝐞𝐦𝐛𝐚𝐧𝐭𝐮 𝐀𝐧𝐝𝐚
-𝐏𝐞𝐫𝐢𝐧𝐭𝐚𝐡 𝐏𝐞𝐫𝐭𝐚𝐦𝐚 𝐘𝐚𝐧𝐠 𝐃𝐢𝐬𝐞𝐝𝐢𝐚𝐤𝐚𝐧‼️
- ➢ /start: mulai bot
- ➢ /help: PM pesan ini.
- ➢ /help <nama modul>: PM info tentang modul itu.
- ➢ /source: Informasi tentang sumber saya.
- ➢ /pengaturan:
-   • di PM: akan mengirimkan pengaturan Anda untuk semua modul yang didukung.
-   • dalam grup: akan mengarahkan Anda ke pm, dengan semua pengaturan obrolan itu.
-**sᴇᴍᴜᴀ ᴘᴇʀɪɴᴛᴀʜ ᴅᴀᴘᴀᴛ ᴅɪɢᴜɴᴀᴋᴀɴ ᴅᴇɴɢᴀɴ / ᴀᴛᴀᴜ !**
-**ᴅᴀɴ ʙᴇʀɪᴋᴜᴛ ɪɴɪ:**
+**ʜᴇɪ ɪɴɪ ᴀᴅᴀʟᴀʜ ғɪᴛᴜʀ sᴀʏᴀ**
+**Sᴇᴍᴜᴀᴍʏᴀ ᴅᴀᴘᴀᴛ ᴅɪɢᴜɴᴀᴋᴀɴ ᴅᴇɴɢᴀɴ / ᴀᴛᴀᴜ !**
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
 
@@ -293,14 +282,14 @@ def get_help(bot: Bot, update: Update):
         update.effective_message.reply_text("Contact me in PM to get the list of possible commands.",
                                             reply_markup=InlineKeyboardMarkup(
                                                 [[InlineKeyboardButton(text="ᴄᴀɴ ɪ ʜᴇʟᴘ ʏᴏᴜ?",url="t.me/{}?start=help".format(bot.username))],  
-                                                [InlineKeyboardButton(text="ᴄᴏɴᴛᴀᴄᴛ ᴏᴡɴᴇʀ",url="https://t.me/iyainyabre")]]))
+                                                [InlineKeyboardButton(text="ᴅᴇᴠᴇʟᴏᴘᴇʀ",url="https://t.me/knsgnwn")]]))
         return
 
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
         module = args[1].lower()
         text = "Here is the available help for the *{}* module:\n".format(HELPABLE[module].__mod_name__) \
                + HELPABLE[module].__help__
-        send_help(chat.id, text, InlineKeyboardMarkup([[InlineKeyboardButton(text="🚶‍♂️Back🚶‍♂️", callback_data="help_back")]]))
+        send_help(chat.id, text, InlineKeyboardMarkup([[InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="help_back")]]))
 
     else:
         send_help(chat.id, HELP_STRINGS)
