@@ -12,6 +12,8 @@ from parsel import Selector
 import json
 from urllib.request import urlopen
 from sys import argv
+from pyrogram import Client, filters
+from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, Chat, CallbackQuery
 from telegram import Message, Chat, Update, Bot, User
 from telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup, KeyboardButton
 from telegram.error import Unauthorized, BadRequest, TimedOut, NetworkError, ChatMigrated, TelegramError
@@ -183,12 +185,7 @@ def send_start(bot, update):
             text="➕️ ᴀᴅᴅ ᴋɢ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕️", url="t.me/{}?startgroup=true".format(bot.username)),
     ],
     [
-        InlineKeyboardButton(text="ɢʀᴏᴜᴘ", url=f"https://t.me/chlenterasajak"),
-        InlineKeyboardButton(
-            text="ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/iyainyabre"
-        ),
-    ],
-    [
+        InlineKeyboardButton(text="ᴍᴜsɪᴄ ʙᴏᴛ", callback_data="cbstart")
         InlineKeyboardButton(text="ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅꜱ❔", callback_data="help_back"),
     ],
 ]
