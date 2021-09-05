@@ -64,7 +64,7 @@ class AioHttp:
                 return await resp.read()
 
 
-__mod_name__ = "Inline"
+__mod_name__ = "ɪɴʟɪɴᴇ"
 __help__ = """
  <b> INLINE BOT SERVICE OF @KGSuperbot </b> 
  
