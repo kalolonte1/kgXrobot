@@ -12,7 +12,7 @@ async def give_repo(c, m):
     for i in repo.get_contributors():
         count += 1
         list_of_users += f"*{count}.* [{i.login}](https://github.com/{i.login})\n"
-    text = f"""[Github](https://github.com/ferikunn/JisooXRobot) | [Group](https://t.me/JisooSupport)
+    text = f"""[Github](https://xnxx.com) | [Group](https://t.me/KGSupportgroup)
 ```----------------
 | Contributors |
 ----------------```
